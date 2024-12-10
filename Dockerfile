@@ -1,4 +1,4 @@
-FROM rust:1.73.0 as builder
+FROM rust:1.83.0 as builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -28,4 +28,4 @@ EXPOSE 8080/tcp
 
 ENV RUST_LOG=info
 
-CMD ["/zumble", "--http-password", "changeme"]
+ENTRYPOINT ["/zumble"]
